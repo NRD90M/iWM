@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+	
+    
+    
+    <ImageView
+        android:id="@+id/iv_personal_bg"
+        android:layout_width="match_parent"
+        android:layout_height="300dip"
+        android:layout_marginTop="-100dip"
+        android:scaleType="fitXY"
+        android:src="@mipmap/profiles_default_personal_bg" />
+
+    
+    
+    <View
+        android:id="@+id/line_up"
+        android:layout_width="2dip"
+        android:layout_height="400dip"
+        android:layout_marginLeft="60dip"
+        android:layout_marginTop="-290dip"
+        android:background="#10000000" />
+
+    <top.nrd90m.iwm.gb.PersonalScrollView
+        android:id="@+id/personalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:background="#00000000"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/image_header"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginTop="100dip"
+                    android:src="@mipmap/default_user_hole" />
+
+                <ImageView
+                    android:id="@+id/iv_line_down"
+                    android:layout_width="20dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dip"
+                    android:layout_marginTop="155dip"
+                    android:background="@mipmap/line_oblique" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/iv_line_down"
+                    android:layout_marginTop="-3dip"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+          
+        </LinearLayout>
+    </top.nrd90m.iwm.gb.PersonalScrollView>
+
+
+</RelativeLayout>

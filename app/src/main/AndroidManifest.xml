@@ -10,16 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".FullscreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme">
+            android:name="top.nrd90m.iwm.index.FirstMainViewActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name="top.nrd90m.iwm.demo.MainActivity_HomePage" >
+        </activity>
+        <activity android:name="top.nrd90m.iwm.book.BookMainActivity" >
+        </activity>
+        <activity android:name="top.nrd90m.iwm.yee.MainActivity_Yee" >
+        </activity>
+        <activity android:name="top.nrd90m.iwm.gb.MainActivity_Gb" >
+        </activity>
+        <service
+            android:name="top.nrd90m.iwm.book.MusicService"
+            android:exported="true"
+            android:process=":remote" >
+        </service>
     </application>
 
 </manifest>

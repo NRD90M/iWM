@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <VideoView
+        android:id="@+id/video_view_show"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"/>
+    <View
+        android:id="@+id/frame_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/videoframe"/>
+  
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <View
+            android:id="@+id/up_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/up"/>
+        <View
+            android:id="@+id/down_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/dow"/>
+        
+    </LinearLayout>
+
+    <View
+        android:id="@+id/handsunshine_view"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/handsunshine"/>
+      
+    <LinearLayout 
+        android:layout_marginBottom="50dp" 
+        android:layout_alignParentBottom="true"  
+        android:gravity="bottom|center_vertical|center_horizontal" 
+        android:layout_gravity="bottom|center_vertical|center_horizontal" 
+        android:orientation="vertical" 
+        android:id="@+id/bottomLayout" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" >
+      
+  
+      
+       
+      </LinearLayout>
+</RelativeLayout>
+
