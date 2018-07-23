@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_meng" />
 
         <TextView
             android:id="@+id/text_content"
