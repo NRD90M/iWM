@@ -7,14 +7,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#339966" >
+        android:background="@color/colorPrimary" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="假  如"
+            android:text="假如"
             android:textSize="24dp" />
     </RelativeLayout>
 

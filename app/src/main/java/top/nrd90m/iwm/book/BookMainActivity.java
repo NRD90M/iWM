@@ -101,7 +101,7 @@ public class BookMainActivity extends Activity {
 	@Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-        	MainActivity_HomePage.h=true;
+        	MainActivity_HomePage.two=true;
             finish();
             
             return true;  

@@ -2,105 +2,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#999999" >
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_gravity="center">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#339966" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="假  如"
-            android:textSize="24dp" />
-
-    </RelativeLayout>
 
    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="60dp"
-            android:orientation="vertical" >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
 
             <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="150dp" >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
 
                 <ImageView
                     android:id="@+id/img_one"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/item_one" />
+                <ImageView
+                    android:id="@+id/lock_one"
+                    android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/qs" />
+                    android:src="@mipmap/lock" />
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="30dp" >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp" >
 
                 <ImageView
                     android:id="@+id/img_two"
-                    android:layout_width="fill_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/yz" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/item_two" />
 
                 <ImageView
-                    android:id="@+id/su_one"
-                    android:layout_width="fill_parent"
+                    android:id="@+id/lock_two"
+                    android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@mipmap/lock" />
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="30dp" >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp" >
 
                 <ImageView
                     android:id="@+id/img_three"
-                    android:layout_width="fill_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/sn" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/item_three" />
 
                 <ImageView
-                    android:id="@+id/su_two"
-                    android:layout_width="fill_parent"
+                    android:id="@+id/lock_three"
+                    android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@mipmap/lock" />
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="30dp" >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp" >
 
                 <ImageView
                     android:id="@+id/img_four"
-                    android:layout_width="fill_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/gb" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@mipmap/item_four" />
 
                 <ImageView
-                    android:id="@+id/su_three"
-                    android:layout_width="fill_parent"
+                    android:id="@+id/lock_four"
+                    android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@mipmap/lock" />
             </FrameLayout>
 
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="40dp" />
         </LinearLayout>
     </ScrollView> 
 

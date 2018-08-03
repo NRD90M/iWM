@@ -15,11 +15,12 @@ import top.nrd90m.iwm.gb.MainActivity_Gb;
 import top.nrd90m.iwm.yee.MainActivity_Yee;
 
 public class MainActivity_HomePage extends Activity implements OnClickListener {
-	private ImageView img, img_one, img_two, img_three;
-	private ImageView su_one, su_two, su_three;
-	public static boolean h = false;
-	public static boolean l = false;
-	public static boolean j = false;
+	private ImageView  img_one, img_two, img_three, img_four;
+	private ImageView lock_one, lock_two, lock_three, lock_four;
+	public static boolean one = true;
+	public static boolean two = false;
+	public static boolean three = false;
+	public static boolean four = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,33 +31,42 @@ public class MainActivity_HomePage extends Activity implements OnClickListener {
 
 	public void init() {
 
-		su_one = (ImageView) findViewById(R.id.su_one);
-		su_two = (ImageView) findViewById(R.id.su_two);
-		su_three = (ImageView) findViewById(R.id.su_three);
+		lock_one = (ImageView) findViewById(R.id.lock_one);
+		lock_two = (ImageView) findViewById(R.id.lock_two);
+		lock_three = (ImageView) findViewById(R.id.lock_three);
+		lock_four = (ImageView) findViewById(R.id.lock_four);
 
-		img = (ImageView) findViewById(R.id.img_one);
-		img.setOnClickListener(this);
-
-		img_one = (ImageView) findViewById(R.id.img_two);
+		img_one = (ImageView) findViewById(R.id.img_one);
 		img_one.setOnClickListener(this);
 
-		img_two = (ImageView) findViewById(R.id.img_three);
+		img_two = (ImageView) findViewById(R.id.img_two);
 		img_two.setOnClickListener(this);
 
-		img_three = (ImageView) findViewById(R.id.img_four);
+		img_three = (ImageView) findViewById(R.id.img_three);
 		img_three.setOnClickListener(this);
+
+		img_four = (ImageView) findViewById(R.id.img_four);
+		img_four.setOnClickListener(this);
 	}
 
 	@Override
 	protected void onResume() {
-		if (h) {
+		if (one) {
 
-			su_one.setVisibility(View.GONE);
+			lock_one.setVisibility(View.GONE);
 		}
-		if (l) {
+		if (two) {
 
-			su_two.setVisibility(View.GONE);
+			lock_two.setVisibility(View.GONE);
 		}
+        if (three) {
+
+            lock_three.setVisibility(View.GONE);
+        }
+        if (four) {
+
+            lock_four.setVisibility(View.GONE);
+        }
 
 		super.onResume();
 	}
@@ -69,7 +79,7 @@ public class MainActivity_HomePage extends Activity implements OnClickListener {
 			startActivity(intent);
 			break;
 		case R.id.img_two:
-			if (h) {
+			if (two) {
 				Intent intent1 = new Intent(this, MainActivity_Yee.class);
 				startActivity(intent1);
 			} else {
@@ -77,7 +87,7 @@ public class MainActivity_HomePage extends Activity implements OnClickListener {
 			}
 			break;
 		case R.id.img_three:
-			if (l) {
+			if (three) {
 				Intent intent2 = new Intent(this, MainActivity_Gb.class);
 				startActivity(intent2);
 			} else {

@@ -74,7 +74,7 @@ public class MainActivity_Yee extends Activity
 	@Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-        	MainActivity_HomePage.l=true;
+        	MainActivity_HomePage.three=true;
             finish();
             return true;  
         } else  
