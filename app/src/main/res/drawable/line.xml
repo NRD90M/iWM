@@ -2,7 +2,7 @@
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
     android:dither="true"
     android:gravity="center"
-    android:src="@mipmap/line_v"
+    android:src="@drawable/line_vertical"
     android:tileMode="repeat" >
 
 </bitmap>

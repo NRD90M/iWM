@@ -9,27 +9,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_meng_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.Fullscreen">
+        android:theme="@style/AppTheme.Fullscreen"
+        android:screenOrientation="portrait"
+        android:launchMode="singleTask">
         <activity
-            android:name="top.nrd90m.iwm.demo.MainActivity_HomePage"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Fullscreen">
+            android:name="top.nrd90m.iwm.index.FirstMainViewActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name="top.nrd90m.iwm.index.FirstMainViewActivity" >
+        <activity
+            android:name="top.nrd90m.iwm.demo.MainActivity_HomePage" >
         </activity>
-        <activity android:name="top.nrd90m.iwm.book.BookMainActivity" >
+        <activity
+            android:name="top.nrd90m.iwm.book.BookMainActivity" >
         </activity>
-        <activity android:name="top.nrd90m.iwm.yee.MainActivity_Yee" >
+        <activity
+            android:name="top.nrd90m.iwm.yee.MainActivity_Yee" >
         </activity>
-        <activity android:name="top.nrd90m.iwm.gb.MainActivity_Gb" >
+        <activity
+            android:name="top.nrd90m.iwm.gb.MainActivity_Gb" >
         </activity>
         <service
             android:name="top.nrd90m.iwm.book.MusicService"

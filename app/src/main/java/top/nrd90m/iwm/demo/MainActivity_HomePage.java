@@ -16,7 +16,7 @@ import top.nrd90m.iwm.yee.MainActivity_Yee;
 
 public class MainActivity_HomePage extends Activity implements OnClickListener {
 	private ImageView  img_one, img_two, img_three, img_four;
-	private ImageView lock_one, lock_two, lock_three, lock_four;
+	private ImageView heart_one, heart_two, heart_three, heart_four;
 	public static boolean one = true;
 	public static boolean two = false;
 	public static boolean three = false;
@@ -31,10 +31,10 @@ public class MainActivity_HomePage extends Activity implements OnClickListener {
 
 	public void init() {
 
-		lock_one = (ImageView) findViewById(R.id.lock_one);
-		lock_two = (ImageView) findViewById(R.id.lock_two);
-		lock_three = (ImageView) findViewById(R.id.lock_three);
-		lock_four = (ImageView) findViewById(R.id.lock_four);
+		heart_one = (ImageView) findViewById(R.id.heart_one);
+		heart_two = (ImageView) findViewById(R.id.heart_two);
+		heart_three = (ImageView) findViewById(R.id.heart_three);
+		heart_four = (ImageView) findViewById(R.id.heart_four);
 
 		img_one = (ImageView) findViewById(R.id.img_one);
 		img_one.setOnClickListener(this);
@@ -53,19 +53,19 @@ public class MainActivity_HomePage extends Activity implements OnClickListener {
 	protected void onResume() {
 		if (one) {
 
-			lock_one.setVisibility(View.GONE);
+			heart_one.setVisibility(View.GONE);
 		}
 		if (two) {
 
-			lock_two.setVisibility(View.GONE);
+			heart_two.setVisibility(View.GONE);
 		}
         if (three) {
 
-            lock_three.setVisibility(View.GONE);
+            heart_three.setVisibility(View.GONE);
         }
         if (four) {
 
-            lock_four.setVisibility(View.GONE);
+            heart_four.setVisibility(View.GONE);
         }
 
 		super.onResume();

@@ -36,10 +36,23 @@ public class MainActivity_Yee extends Activity
 		setContentView(R.layout.yee_main);
 		mText=(TextView) findViewById(R.id.text_content);
 		mImg = (ImageView) findViewById(R.id.id_content);
-		mDatas = new ArrayList<Integer>(Arrays.asList(R.mipmap.a,
-				R.mipmap.f, R.mipmap.a, R.mipmap.f, R.mipmap.a,
-				R.mipmap.f));
-		mContent=new ArrayList<String>(Arrays.asList("我想念你的笑，想念你白色袜子的味道","你那么美，那么美，那么美美美！","别说的别说别说你还不曾爱我","若爱，请深爱","我说下辈子我还会记得你","作者就一屌丝不懂浪漫，大家自行发挥改写"));
+		mDatas = new ArrayList<Integer>(Arrays.asList(
+				R.mipmap.lover_one,
+				R.mipmap.lover_two,
+				R.mipmap.lover_three,
+				R.mipmap.lover_four,
+				R.mipmap.lover_five,
+				R.mipmap.lover_six,
+				R.mipmap.lover_seven,
+				R.mipmap.lover_eight,
+				R.mipmap.lover_nine));
+		mContent=new ArrayList<String>(Arrays.asList(
+				"我想念你的笑，想念你白色袜子的味道",
+				"你那么美，那么美，那么美美美！",
+				"别说的别说别说你还不曾爱我",
+				"若爱，请深爱",
+				"我说下辈子我还会记得你",
+				"作者就一屌丝不懂浪漫，大家自行发挥改写"));
 		
 		mRecyclerView = (MyRecycler) findViewById(R.id.id_recyclerview_horizontal);
 		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);

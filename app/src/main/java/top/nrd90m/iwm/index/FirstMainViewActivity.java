@@ -35,7 +35,7 @@ public class FirstMainViewActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.first_view_main);
+		setContentView(R.layout.first_view);
 		videoView = (VideoView) findViewById(R.id.video_view_show);
 		frameView = findViewById(R.id.frame_view);
 		upView = findViewById(R.id.up_view);
@@ -78,7 +78,7 @@ public class FirstMainViewActivity extends FragmentActivity {
 		upView.startAnimation(translateUp);
 		downView.startAnimation(translateDown);
 		videoView.setVideoURI(Uri.parse("android.resource://"
-				+ getPackageName() + "/" + R.raw.mp));
+				+ getPackageName() + "/" + R.raw.lovevideo));
 		videoView.start();
 		videoView
 				.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

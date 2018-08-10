@@ -50,7 +50,7 @@ public class TimelineAdapter extends BaseAdapter {
 			viewHolder = new ViewHolder();
 			viewHolder.title = (TextView) convertView.findViewById(R.id.title);
 			viewHolder.year = (TextView) convertView.findViewById(R.id.show_time);
-			viewHolder.img = (ImageView) convertView.findViewById(R.id.image_1);
+			viewHolder.img = (ImageView) convertView.findViewById(R.id.image_one);
 			convertView.setTag(viewHolder);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();

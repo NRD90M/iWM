@@ -28,11 +28,11 @@ public class BookMainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.book_main);
+		setContentView(R.layout.letter_main);
 		bt = (Button) findViewById(R.id.but);
 		TextView tv = (TextView) findViewById(R.id.text);
 		//获取 raw里的 txt文本 
-		InputStream text=	getResources().openRawResource(R.raw.a);
+		InputStream text=	getResources().openRawResource(R.raw.loveletter);
 		tv.setText(getString(text));
 		// 动画旋转
 		an = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);

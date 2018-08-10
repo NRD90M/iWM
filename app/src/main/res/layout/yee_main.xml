@@ -4,43 +4,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/colorPrimary" >-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="假如"-->
+            <!--android:textSize="24dp" />-->
+    <!--</RelativeLayout>-->
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="假如"
-            android:textSize="24dp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
 
         <ImageView
             android:id="@+id/id_content"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_meng" />
+            android:src="@mipmap/example_full" />
 
         <TextView
             android:id="@+id/text_content"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/id_content"
             android:layout_margin="20dp"
             android:layout_marginBottom="38dp"
-            android:text="java was modified"
+            android:text="小猪佩奇我配你"
             android:textColor="#fff"
             android:textSize="20dp" />
 
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_gravity="bottom"
-        android:background="#FF0000"
+        android:background="@color/white"
         android:scrollbars="none" />
 
 </LinearLayout>

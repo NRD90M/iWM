@@ -6,7 +6,6 @@
     android:gravity="center"
     android:layout_gravity="center">
 
-
    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -28,10 +27,11 @@
                     android:scaleType="center"
                     android:src="@mipmap/item_one" />
                 <ImageView
-                    android:id="@+id/lock_one"
+                    android:id="@+id/heart_one"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@mipmap/lock" />
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/heart" />
             </FrameLayout>
 
             <FrameLayout
@@ -47,10 +47,11 @@
                     android:src="@mipmap/item_two" />
 
                 <ImageView
-                    android:id="@+id/lock_two"
+                    android:id="@+id/heart_two"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@mipmap/lock" />
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/heart" />
             </FrameLayout>
 
             <FrameLayout
@@ -66,10 +67,11 @@
                     android:src="@mipmap/item_three" />
 
                 <ImageView
-                    android:id="@+id/lock_three"
+                    android:id="@+id/heart_three"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@mipmap/lock" />
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/heart" />
             </FrameLayout>
 
             <FrameLayout
@@ -85,10 +87,11 @@
                     android:src="@mipmap/item_four" />
 
                 <ImageView
-                    android:id="@+id/lock_four"
+                    android:id="@+id/heart_four"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@mipmap/lock" />
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/heart" />
             </FrameLayout>
 
         </LinearLayout>
