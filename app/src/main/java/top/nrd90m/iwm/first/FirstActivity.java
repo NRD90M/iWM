@@ -1,4 +1,4 @@
-package top.nrd90m.iwm.index;
+package top.nrd90m.iwm.first;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -15,10 +15,10 @@ import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.VideoView;
 
-import top.nrd90m.iwm.demo.MainActivity_HomePage;
+import top.nrd90m.iwm.main.MainActivity;
 import top.nrd90m.iwm.R;
 
-public class FirstMainViewActivity extends FragmentActivity {
+public class FirstActivity extends FragmentActivity {
 	private VideoView videoView;
 	private View frameView;
 	private View upView;
@@ -98,8 +98,8 @@ public class FirstMainViewActivity extends FragmentActivity {
 			// TODO Auto-generated method stub
 
 			Intent intent = new Intent();
-			intent.setClass(FirstMainViewActivity.this,
-					MainActivity_HomePage.class);
+			intent.setClass(FirstActivity.this,
+					MainActivity.class);
 			startActivity(intent);
 			finish();
 

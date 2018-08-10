@@ -13,7 +13,7 @@
         android:screenOrientation="portrait"
         android:launchMode="singleTask">
         <activity
-            android:name="top.nrd90m.iwm.index.FirstMainViewActivity"
+            android:name="top.nrd90m.iwm.first.FirstActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,19 +21,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="top.nrd90m.iwm.demo.MainActivity_HomePage" >
+            android:name="top.nrd90m.iwm.main.MainActivity" >
         </activity>
         <activity
-            android:name="top.nrd90m.iwm.book.BookMainActivity" >
+            android:name="top.nrd90m.iwm.letter.LetterActivity" >
         </activity>
         <activity
-            android:name="top.nrd90m.iwm.yee.MainActivity_Yee" >
+            android:name="top.nrd90m.iwm.gallery.GalleryActivity" >
         </activity>
         <activity
-            android:name="top.nrd90m.iwm.gb.MainActivity_Gb" >
+            android:name="top.nrd90m.iwm.circle.CircleActivity" >
         </activity>
         <service
-            android:name="top.nrd90m.iwm.book.MusicService"
+            android:name="top.nrd90m.iwm.letter.MusicService"
             android:exported="true"
             android:process=":remote" >
         </service>

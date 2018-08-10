@@ -1,4 +1,4 @@
-package top.nrd90m.iwm.book;
+package top.nrd90m.iwm.letter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 
-import top.nrd90m.iwm.demo.MainActivity_HomePage;
+import top.nrd90m.iwm.main.MainActivity;
 import top.nrd90m.iwm.R;
 
 import java.io.BufferedReader;
@@ -21,7 +21,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
-public class BookMainActivity extends Activity {
+public class LetterActivity extends Activity {
 	boolean p = false;
 	private Button bt;
 	private Animation an;
@@ -41,7 +41,7 @@ public class BookMainActivity extends Activity {
 		an.setFillAfter(true);// 停在最后
 		an.setDuration(4000);// 旋转一次的时间
 		bt.startAnimation(an);
-		Intent intent = new Intent(BookMainActivity.this, MusicService.class);
+		Intent intent = new Intent(LetterActivity.this, MusicService.class);
 		startService(intent);
 		// 动画开始
 		bt.setOnClickListener(new OnClickListener() {
@@ -50,13 +50,13 @@ public class BookMainActivity extends Activity {
 				if (!p) {
 					// 首次点击后 停止动画 跟音乐
 					bt.clearAnimation();
-					Intent intent = new Intent(BookMainActivity.this,MusicService.class);
+					Intent intent = new Intent(LetterActivity.this,MusicService.class);
 					stopService(intent);
 					p = true;
 				} else {
 					// 当第二次点击后 开启动画 跟音乐
 					bt.startAnimation(an);
-					Intent intent = new Intent(BookMainActivity.this,MusicService.class);
+					Intent intent = new Intent(LetterActivity.this,MusicService.class);
 					startService(intent);
 					p = false;
 				}
@@ -67,7 +67,7 @@ public class BookMainActivity extends Activity {
 	@Override
 	protected void onStop() {
 		// TODO Auto-generated method stub
-		Intent intent = new Intent(BookMainActivity.this, MusicService.class);
+		Intent intent = new Intent(LetterActivity.this, MusicService.class);
 		stopService(intent);
 		super.onStop();
 	}
@@ -101,7 +101,7 @@ public class BookMainActivity extends Activity {
 	@Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-        	MainActivity_HomePage.two=true;
+        	MainActivity.two=true;
             finish();
             
             return true;  

@@ -1,4 +1,4 @@
-package top.nrd90m.iwm.demo;
+package top.nrd90m.iwm.main;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,11 +10,11 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import top.nrd90m.iwm.R;
-import top.nrd90m.iwm.book.BookMainActivity;
-import top.nrd90m.iwm.gb.MainActivity_Gb;
-import top.nrd90m.iwm.yee.MainActivity_Yee;
+import top.nrd90m.iwm.letter.LetterActivity;
+import top.nrd90m.iwm.circle.CircleActivity;
+import top.nrd90m.iwm.gallery.GalleryActivity;
 
-public class MainActivity_HomePage extends Activity implements OnClickListener {
+public class MainActivity extends Activity implements OnClickListener {
 	private ImageView  img_one, img_two, img_three, img_four;
 	private ImageView heart_one, heart_two, heart_three, heart_four;
 	public static boolean one = true;
@@ -75,12 +75,12 @@ public class MainActivity_HomePage extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.img_one:
-			Intent intent = new Intent(this, BookMainActivity.class);
+			Intent intent = new Intent(this, LetterActivity.class);
 			startActivity(intent);
 			break;
 		case R.id.img_two:
 			if (two) {
-				Intent intent1 = new Intent(this, MainActivity_Yee.class);
+				Intent intent1 = new Intent(this, GalleryActivity.class);
 				startActivity(intent1);
 			} else {
 				Toast.makeText(getApplicationContext(), "未解锁", 0).show();
@@ -88,7 +88,7 @@ public class MainActivity_HomePage extends Activity implements OnClickListener {
 			break;
 		case R.id.img_three:
 			if (three) {
-				Intent intent2 = new Intent(this, MainActivity_Gb.class);
+				Intent intent2 = new Intent(this, CircleActivity.class);
 				startActivity(intent2);
 			} else {
 				Toast.makeText(getApplicationContext(), "未解锁", 0).show();

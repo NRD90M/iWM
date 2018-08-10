@@ -47,7 +47,7 @@
        
     </RelativeLayout>
 
-    <top.nrd90m.iwm.yee.MyRecycler
+    <top.nrd90m.iwm.gallery.MyRecycler
         android:id="@+id/id_recyclerview_horizontal"
         android:layout_width="match_parent"
         android:layout_height="120dp"
