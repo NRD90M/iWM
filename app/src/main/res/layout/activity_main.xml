@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_gravity="center"
                     android:layout_height="50dp"
-                    android:src="@mipmap/heart" />
+                    android:src="@mipmap/heart_lock" />
             </FrameLayout>
 
             <FrameLayout
@@ -51,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_gravity="center"
                     android:layout_height="50dp"
-                    android:src="@mipmap/heart" />
+                    android:src="@mipmap/heart_lock" />
             </FrameLayout>
 
             <FrameLayout
@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_gravity="center"
                     android:layout_height="50dp"
-                    android:src="@mipmap/heart" />
+                    android:src="@mipmap/heart_lock" />
             </FrameLayout>
 
             <FrameLayout
@@ -91,7 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_gravity="center"
                     android:layout_height="50dp"
-                    android:src="@mipmap/heart" />
+                    android:src="@mipmap/heart_lock" />
             </FrameLayout>
 
         </LinearLayout>

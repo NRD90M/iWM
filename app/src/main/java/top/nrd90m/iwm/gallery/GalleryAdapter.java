@@ -68,7 +68,10 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
 		ViewHolder viewHolder = new ViewHolder(view);
 
 		viewHolder.mImg = (ImageView) view
-				.findViewById(R.id.id_index_gallery_item_image);
+				.findViewById(R.id.gallery_item_image);
+
+		viewHolder.mTxt = (TextView) view
+				.findViewById(R.id.gallery_item_text);
 		return viewHolder;
 	}
 	  /** 

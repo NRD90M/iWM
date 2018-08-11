@@ -33,7 +33,7 @@ public class GalleryActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.yee_main);
+		setContentView(R.layout.gallery_main);
 		mText=(TextView) findViewById(R.id.text_content);
 		mImg = (ImageView) findViewById(R.id.id_content);
 		mDatas = new ArrayList<Integer>(Arrays.asList(
@@ -47,17 +47,16 @@ public class GalleryActivity extends Activity
 				R.mipmap.lover_eight,
 				R.mipmap.lover_nine));
 		mContent=new ArrayList<String>(Arrays.asList(
-				"我想念你的笑，想念你白色袜子的味道",
-				"你那么美，那么美，那么美美美！",
-				"别说的别说别说你还不曾爱我",
-				"若爱，请深爱",
-				"我说下辈子我还会记得你",
-				"小猪佩奇我配你",
-				"若爱，请深爱",
-				"我说下辈子我还会记得你",
-				"小猪佩奇我配你"));
-		
-		mRecyclerView = (MyRecycler) findViewById(R.id.id_recyclerview_horizontal);
+				"第一次见你，我说，一眼万年。",
+				"小可爱在教室为我照的第一张照片，用它做了好长时间的聊天背景呢。",
+				"这是我可爱的大兔兔。",
+				"本想发朋友圈的，喜欢这非主流的可爱老婆。",
+				"老婆的小白兔大了呢，以后老公多喂喂它。",
+				"媳妇儿很乖，出去吃饭也想着老公。",
+				"丹顶鹤看一眼就够了，但是你我百看不厌。",
+				"没B612的媳妇儿，依旧很迷人。",
+				"老婆，你口活一定很棒，我捡到宝了！"));
+		mRecyclerView = (MyRecycler) findViewById(R.id.recyclerview_horizontal);
 		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 		linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
@@ -72,7 +71,7 @@ public class GalleryActivity extends Activity
 			{
 				mImg.setImageResource(mDatas.get(position));
 				mText.setText(mContent.get(position));
-			};
+			}
 		});
 		//点击
 		mAdapter.setOnItemClickLitener(new OnItemClickLitener()

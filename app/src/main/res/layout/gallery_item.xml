@@ -5,7 +5,7 @@
     android:background="@drawable/item_background" >
 
     <ImageView
-        android:id="@+id/id_index_gallery_item_image"
+        android:id="@+id/gallery_item_image"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentTop="true"
@@ -14,15 +14,15 @@
         android:scaleType="centerCrop" />
 
     <TextView
-        android:id="@+id/id_index_gallery_item_text"
+        android:id="@+id/gallery_item_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_index_gallery_item_image"
+        android:layout_below="@id/gallery_item_image"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:textColor="#ff0000"
-        android:text="Slide"
+        android:text=""
         android:textSize="12dp" />
 
 </RelativeLayout>

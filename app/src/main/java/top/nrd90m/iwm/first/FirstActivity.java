@@ -78,7 +78,7 @@ public class FirstActivity extends FragmentActivity {
 		upView.startAnimation(translateUp);
 		downView.startAnimation(translateDown);
 		videoView.setVideoURI(Uri.parse("android.resource://"
-				+ getPackageName() + "/" + R.raw.lovevideo));
+				+ getPackageName() + "/" + R.raw.love_video));
 		videoView.start();
 		videoView
 				.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

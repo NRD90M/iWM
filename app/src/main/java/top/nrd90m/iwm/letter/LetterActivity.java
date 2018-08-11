@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import top.nrd90m.iwm.main.MainActivity;
@@ -25,14 +26,23 @@ public class LetterActivity extends Activity {
 	boolean p = false;
 	private Button bt;
 	private Animation an;
+    private int letter_background[] = {
+            R.mipmap.letter_background_one,
+            R.mipmap.letter_background_two,
+            R.mipmap.letter_background_three,
+			R.mipmap.letter_background_four,
+			R.mipmap.letter_background_five
+	};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.letter_main);
+		LinearLayout layout = (LinearLayout)this.findViewById(R.id.letter_background);
+		layout.setBackgroundResource(letter_background[(int)(Math.random()*5)]);
 		bt = (Button) findViewById(R.id.but);
 		TextView tv = (TextView) findViewById(R.id.text);
 		//获取 raw里的 txt文本 
-		InputStream text=	getResources().openRawResource(R.raw.loveletter);
+		InputStream text=	getResources().openRawResource(R.raw.love_letter);
 		tv.setText(getString(text));
 		// 动画旋转
 		an = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);

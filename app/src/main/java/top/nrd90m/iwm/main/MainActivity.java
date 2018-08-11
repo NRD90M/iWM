@@ -75,15 +75,19 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.img_one:
-			Intent intent = new Intent(this, LetterActivity.class);
-			startActivity(intent);
+            if (one) {
+                Intent intent = new Intent(this, LetterActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(getApplicationContext(), "未解锁", Toast.LENGTH_SHORT).show();
+            }
 			break;
 		case R.id.img_two:
 			if (two) {
 				Intent intent1 = new Intent(this, GalleryActivity.class);
 				startActivity(intent1);
 			} else {
-				Toast.makeText(getApplicationContext(), "未解锁", 0).show();
+				Toast.makeText(getApplicationContext(), "未解锁", Toast.LENGTH_SHORT).show();
 			}
 			break;
 		case R.id.img_three:
@@ -91,12 +95,16 @@ public class MainActivity extends Activity implements OnClickListener {
 				Intent intent2 = new Intent(this, CircleActivity.class);
 				startActivity(intent2);
 			} else {
-				Toast.makeText(getApplicationContext(), "未解锁", 0).show();
+				Toast.makeText(getApplicationContext(), "未解锁", Toast.LENGTH_SHORT).show();
 			}
 			break;
 		case R.id.img_four:
-
-			Toast.makeText(getApplicationContext(), "未找到正确的激活方式", 0).show();
+			if (four) {
+				Intent intent3 = new Intent(this, CircleActivity.class);
+				startActivity(intent3);
+			} else {
+				Toast.makeText(getApplicationContext(), "请语音输入“我爱你”来解锁此模块！", Toast.LENGTH_SHORT).show();
+			}
 
 			break;
 		default:

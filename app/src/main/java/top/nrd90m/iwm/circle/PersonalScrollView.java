@@ -28,20 +28,20 @@ public class PersonalScrollView extends ScrollView {
 
 	private float initTouchY;// 首次点击的Y坐标
 
-	private boolean shutTouch = false;// 是否关闭ScrollView的滑�?
+	private boolean shutTouch = false;// 是否关闭ScrollView的滑
 
-	private Rect normal = new Rect();// 矩形(这里只是个形式，只是用于判断是否�?��动画.)
+	private Rect normal = new Rect();// 矩形(这里只是个形式，只是用于判断是否动画.)
 
-	private boolean isMoveing = false;// 是否�?��移动.
+	private boolean isMoveing = false;// 是否移动.
 
-	private ImageView imageView;// 背景图控�?
+	private ImageView imageView;// 背景图控
 	private View line_up;// 上线
 	private int line_up_top;// 上线的top
 	private int line_up_bottom;// 上线的bottom
 
 	private int initTop, initBottom;// 初始高度
 
-	private int current_Top, current_Bottom;// 拖动时时高度�?
+	private int current_Top, current_Bottom;// 拖动时时高度
 
 	private int lineUp_current_Top, lineUp_current_Bottom;// 上线
 
@@ -53,12 +53,12 @@ public class PersonalScrollView extends ScrollView {
 		this.imageHeader = imageHeader;
 	}
 
-	// 状�?：上部，下部，默�?
+	// 状：上部，下部，默
 	private enum State {
 		UP, DOWN, NOMAL
 	};
 
-	// 默认状�?
+	// 默认状
 	private State state = State.NOMAL;
 
 	public void setTurnListener(onTurnListener turnListener) {
@@ -71,7 +71,7 @@ public class PersonalScrollView extends ScrollView {
 
 	
 	/***
-	 * 构�?方法
+	 * 构方法
 	 * 
 	 * @param context
 	 * @param attrs
@@ -81,14 +81,17 @@ public class PersonalScrollView extends ScrollView {
 	}
 
 	/***
-	 * 根据 XML 生成视图工作完成.该函数在生成视图的最后调用，在所有子视图添加完之�? 即使子类覆盖�?onFinishInflate
+	 * 根据 XML 生成视图工作完成.该函数在生成视图的最后调用，在所有子视图添加完之 即使子类覆盖onFinishInflate
 	 * 方法，也应该调用父类的方法，使该方法得以执行.
 	 */
+
+
 	@Override
 	protected void onFinishInflate() {
 		if (getChildCount() > 0) {
 			inner = getChildAt(0);
 		}
+		super.onFinishInflate();
 	}
 
 	/** touch 事件处理 **/
@@ -97,7 +100,7 @@ public class PersonalScrollView extends ScrollView {
 		if (inner != null) {
 			commOnTouchEvent(ev);
 		}
-		// ture：禁止控件本身的滑动.
+		// true：禁止控件本身的滑动.
 		if (shutTouch)
 			return true;
 		else
@@ -138,7 +141,7 @@ public class PersonalScrollView extends ScrollView {
 			break;
 
 		/***
-		 * 排除出第�?��移动计算，因为第�?��无法得知deltaY的高度， 然�?我们也要进行初始化，就是第一次移动的时�?让滑动距离归0.
+		 * 排除出第移动计算，因为第无法得知deltaY的高度， 然我们也要进行初始化，就是第一次移动的时让滑动距离归0.
 		 * 之后记录准确了就正常执行.
 		 */
 		case MotionEvent.ACTION_MOVE:
@@ -176,13 +179,13 @@ public class PersonalScrollView extends ScrollView {
 			}
 
 			if (isMoveing) {
-				// 初始化头部矩�?
+				// 初始化头部矩
 				if (normal.isEmpty()) {
-					// 保存正常的布�?���?
+					// 保存正常的布
 					normal.set(inner.getLeft(), inner.getTop(),
 							inner.getRight(), inner.getBottom());
 				}
-				// 移动布局(手势移动�?/3)
+				// 移动布局(手势移动/3)
 				float inner_move_H = deltaY / 5;
 
 				inner.layout(normal.left, (int) (normal.top + inner_move_H),
@@ -222,7 +225,7 @@ public class PersonalScrollView extends ScrollView {
 		imageView.layout(imageView.getLeft(), (int) initTop,
 				imageView.getRight(), (int) initBottom);
 
-		// �?��移动动画
+		//移动动画
 		TranslateAnimation inner_Anim = new TranslateAnimation(0, 0,
 				inner.getTop(), normal.top);
 		inner_Anim.setDuration(200);
@@ -245,7 +248,7 @@ public class PersonalScrollView extends ScrollView {
 
 	}
 
-	/** 是否�?���?��动画 **/
+	/** 是否动画 **/
 	public boolean isNeedAnimation() {
 		return !normal.isEmpty();
 	}
@@ -258,10 +261,10 @@ public class PersonalScrollView extends ScrollView {
 	 */
 	public interface onTurnListener {
 
-		/** 必须达到�?��程度才执�?**/
+		/** 必须达到程度才执**/
 		void onTurn();
 	}
-	// 注入背景�?
+	// 注入背景
 		public void setImageView(ImageView imageView) {
 			this.imageView = imageView;
 		}
