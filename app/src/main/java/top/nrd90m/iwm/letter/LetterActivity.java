@@ -31,14 +31,15 @@ public class LetterActivity extends Activity {
             R.mipmap.letter_background_two,
             R.mipmap.letter_background_three,
 			R.mipmap.letter_background_four,
-			R.mipmap.letter_background_five
+			R.mipmap.letter_background_five,
+			R.mipmap.letter_background_six
 	};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.letter_main);
 		LinearLayout layout = (LinearLayout)this.findViewById(R.id.letter_background);
-		layout.setBackgroundResource(letter_background[(int)(Math.random()*5)]);
+		layout.setBackgroundResource(letter_background[(int)(Math.random()*6)]);
 		bt = (Button) findViewById(R.id.but);
 		TextView tv = (TextView) findViewById(R.id.text);
 		//获取 raw里的 txt文本 

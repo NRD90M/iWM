@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -13,7 +14,11 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.OvershootInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.Toast;
 import android.widget.VideoView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import top.nrd90m.iwm.main.MainActivity;
 import top.nrd90m.iwm.R;
@@ -31,10 +36,26 @@ public class FirstActivity extends FragmentActivity {
 	Animation zoomOutEnter;
 	private int videoFrameWidth = 720;
 	private int videoFrameHeight = 540;
+	String postdate="2018-08-17";
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	private static final String TAG = "FirstActivity";
+
+	Date curDate = new Date(System.currentTimeMillis());//获取当前时间
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Log.i(TAG, "postdate: "+postdate);
+		Log.i(TAG, "formatter: "+formatter.format(curDate));
+
+		if(!formatter.format(curDate).equals(postdate))
+		{
+			Toast.makeText(this,"小可爱，情人节当天才能打开哦！",Toast.LENGTH_LONG).show();
+			finish();
+			return;
+		}
+
+
 		setContentView(R.layout.first_view);
 		videoView = (VideoView) findViewById(R.id.video_view_show);
 		frameView = findViewById(R.id.frame_view);

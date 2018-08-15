@@ -22,13 +22,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@mipmap/welcome_up"/>
+            android:background="@mipmap/first_up"/>
         <View
             android:id="@+id/down_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@mipmap/welcome_down"/>
+            android:background="@mipmap/first_down"/>
     </LinearLayout>
     <View
         android:id="@+id/handsunshine_view"
